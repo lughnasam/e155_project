@@ -1,6 +1,6 @@
-module memory_bank(input logic         clk, write,
-                   input logic [15:0]  address,
-                   input logic [15:0]  datain,
+module memory_bank(input  logic        clk, write,
+                   input  logic [15:0] address,
+                   input  logic [15:0] datain,
                    output logic [15:0] dataout);
     
     logic [15:0] data1, data2, data3, data4;
