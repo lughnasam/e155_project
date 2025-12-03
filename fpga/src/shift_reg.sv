@@ -1,5 +1,5 @@
 module shift_reg(input  logic        clk, reset, in, reading,
-                 output logic [11:0] data_out);
+                 output logic [11:0] dataout);
 
     always_ff @(posedge clk, posedge reset) begin
         if (reset)        dataout <= 12'b0;
