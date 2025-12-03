@@ -1,6 +1,5 @@
 module dp_fsm(input logic clk, reset, start, transmit,
-              output logic rev_read, chor_read, main_read, tfr_ready
-              );
+              output logic rev_read, chor_read, main_read, tfr_ready);
 
     typedef enum logic [2:0] {pause, read_main, chorus, reverb, ready, mcu_spi} statetype;
 

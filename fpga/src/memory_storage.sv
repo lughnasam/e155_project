@@ -1,4 +1,4 @@
-module memory_bank(input  logic        clk, write,
+module memory_storage(input  logic        clk, write,
                    input  logic [15:0] address,
                    input  logic [15:0] datain,
                    output logic [15:0] dataout);
@@ -13,58 +13,58 @@ module memory_bank(input  logic        clk, write,
     assign wren4 = address[15] & address[14] & write;
 
     // 4 16Kx16 RAM blocks for 64K of memory (640 ms of data storage)
-    SB_SPRAM256KA ramfn_inst1(
-        .DATAIN(datain),
-        .ADDRESS(address[13:0]),
-        .MASKWREN(4'b0111),
-        .WREN(wren1),
-        .CHIPSELECT(1'b1),
-        .CLOCK(clk),
-        .STANDBY(1'b0),
+    SP256K ramfn_inst1(
+        .DI(datain),
+        .AD(address[13:0]),
+        .MASKWE(4'b0111),
+        .WE(wren1),
+        .CS(1'b1),
+        .CK(clk),
+        .STDBY(1'b0),
         .SLEEP(1'b0),
-        .POWEROFF(1'b0),
-        .DATAOUT(data1)
-    )
+        .PWROFF_N(1'b0),
+        .DO(data1)
+    );
 
-    SB_SPRAM256KA ramfn_inst2(
-        .DATAIN(datain),
-        .ADDRESS(address[13:0]),
-        .MASKWREN(4'b0111),
-        .WREN(wren2),
-        .CHIPSELECT(1'b1),
-        .CLOCK(clk),
-        .STANDBY(1'b0),
+    SP256K ramfn_inst2(
+        .DI(datain),
+        .AD(address[13:0]),
+        .MASKWE(4'b0111),
+        .WE(wren2),
+        .CS(1'b1),
+        .CK(clk),
+        .STDBY(1'b0),
         .SLEEP(1'b0),
-        .POWEROFF(1'b0),
-        .DATAOUT(data2)
-    )
+        .PWROFF_N(1'b0),
+        .DO(data2)
+    );
 
-    SB_SPRAM256KA ramfn_inst3(
-        .DATAIN(datain),
-        .ADDRESS(address[13:0]),
-        .MASKWREN(4'b0111),
-        .WREN(wren3),
-        .CHIPSELECT(1'b1),
-        .CLOCK(clk),
-        .STANDBY(1'b0),
+    SP256K ramfn_inst3(
+        .DI(datain),
+        .AD(address[13:0]),
+        .MASKWE(4'b0111),
+        .WE(wren3),
+        .CS(1'b1),
+        .CK(clk),
+        .STDBY(1'b0),
         .SLEEP(1'b0),
-        .POWEROFF(1'b0),
-        .DATAOUT(data3)
-    )
+        .PWROFF_N(1'b0),
+        .DO(data3)
+    );
 
-    SB_SPRAM256KA ramfn_inst4(
-        .DATAIN(datain),
-        .ADDRESS(address[13:0]),
-        .MASKWREN(4'b0111),
-        .WREN(wren4),
-        .CHIPSELECT(1'b1),
-        .CLOCK(clk),
-        .STANDBY(1'b0),
+    SP256K ramfn_inst4(
+        .DI(datain),
+        .AD(address[13:0]),
+        .MASKWE(4'b0111),
+        .WE(wren4),
+        .CS(1'b1),
+        .CK(clk),
+        .STDBY(1'b0),
         .SLEEP(1'b0),
-        .POWEROFF(1'b0),
-        .DATAOUT(data4)
-    )
-
+        .PWROFF_N(1'b0),
+        .DO(data4)
+    );
+	
     // mux for data output
     assign dataout = address[15] ? (address[14] ? data4 : data3):
                                    (address[14] ? data2 : data1);

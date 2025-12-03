@@ -7,7 +7,7 @@ module clock_divider(input logic clk, reset,
     always @(posedge clk) begin
         if (reset) counter <= 0;
         else if (counter >= 6'd29) counter <= 0;
-        else counter >= counter + 1;
+        else counter <= counter + 1;
     end
 
     assign chip_en = (counter == 0);

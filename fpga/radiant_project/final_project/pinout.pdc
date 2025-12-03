@@ -1,0 +1,5 @@
+ldc_set_location -site {3} [get_ports adc_sdo]
+ldc_set_location -site {44} [get_ports chip_en]
+ldc_set_location -site {46} [get_ports fpga_sck]
+ldc_set_location -site {10} [get_ports mcu_sdo]
+ldc_set_location -site {47} [get_ports tfr_ready]

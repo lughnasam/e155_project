@@ -13,7 +13,7 @@ module dac_spi(input  logic sck, sdi, reset,
     spi_fsm fsm(.sck(sck), .start_read(start_read), .reset(reset), .sdo(sdo), 
                     .reading(reading), .chip_en(chip_en));
     
-    shift_reg shift(.clk(sck), .reset(reset), .data_out(data_read), .reading(reading));
+    shift_reg shift(.clk(sck), .reset(reset), .in(sdi), .dataout(data_read), .reading(reading));
 
 
 endmodule

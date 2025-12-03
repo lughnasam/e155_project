@@ -5,7 +5,7 @@ module spi_fsm(input logic sck, start_read, reset,
     statetype state, next_state;
     logic [3:0] count;
 
-    always_ff @(posedge sck, negedge reset) begin
+    always_ff @(posedge sck, posedge reset) begin
         // state register
         if (reset) state <= pause;
         else       state <= next_state;
@@ -28,25 +28,15 @@ module spi_fsm(input logic sck, start_read, reset,
             readNull:    next_state = readBits;
             readBits:    if (count < 11) next_state = readBits; 
                          else next_state = write;
-<<<<<<< Updated upstream
             write:       next_state = pause;
-=======
-            write:       next_state = pause; 
->>>>>>> Stashed changes
             default:     next_state = pause;
         endcase
     end
 
     assign sdo = (state == start) || (state == sgl) || (state == msbf); 
-<<<<<<< Updated upstream
     assign reading = (state == readBits);
     assign chip_en = (state == pause) | (state == write);
     assign write_en = (state == write);
-    
-=======
-    assign reading = (state==readBits);
-    assign chip_en = (state == pause) | (state == write);
-    assign write_en = (state == write);
->>>>>>> Stashed changes
+
 
 endmodule

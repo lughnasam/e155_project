@@ -31,13 +31,15 @@ module top(input logic reset, adc_sdi, chorus_on, reverb_on,
     address_counter addressCount(.clk(clk), .inc_adr(inc_adr), .reset(reset), .address(address));
 
     // memory bank
-    memory_storage dataMem(.clk(fpga_sck), .write(write_en), .address(address), .datain(write_data), .dataout(mem_out));
+    memory_storage dataMem(.clk(fpga_sck), .write(write_en), .address(address), .datain(write_data), 
+                            .dataout(mem_out));
 
     // datapath fsm
     dp_fsm dpFSM(.clk(fpga_sck), .reset(reset), .start(start_sample), .rev_read(rev_read),
                   .chor_read(chor_read), .main_read(main_read), .tfr_ready(tfr_ready));
 
-    shift_reg_mcu_spi mcuSPI(.mcu_sck(mcu_sck), .fpga_sck(fpga_sck), .reset(reset), .load(main_read));
+    shift_reg_mcu_spi mcuSPI(.mcu_sck(mcu_sck), .fpga_sck(fpga_sck), .reset(reset), .load(main_read), 
+                            .transmit(mcu_transfer));
     
 
 
