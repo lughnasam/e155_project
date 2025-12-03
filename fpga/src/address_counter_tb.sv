@@ -4,7 +4,6 @@
 module address_counter_tb();
 	logic clk, reset;
 	logic [31:0] vectornum,errors;
-    logic [31:0] vectornum,errors;
 	logic [15:0] address, expected_address;
 	
 	// instantiate device under test
@@ -13,7 +12,7 @@ module address_counter_tb();
 	// at start of test, load vectors and pulse reset
 	initial
 		begin
-			vectornum = 0; errors = 0; reset = 1; #22; reset = 0, expected_address = 0;
+			vectornum = 0; errors = 0; reset = 1; #22; reset = 0; expected_address = 0;
 		end
 		
 	always
@@ -25,7 +24,6 @@ module address_counter_tb();
 	always @(posedge clk)
 		begin
 			#1;
-			$display("%b ", address);
 		end
 
 // check results on falling edge of clk
@@ -36,15 +34,13 @@ module address_counter_tb();
 					errors = errors + 1;
 				end;
 
-            if (vectornum=== 1000) begin
+            if (vectornum=== 65536) begin
 				$display("%d tests completed with %d errors", vectornum, errors);
 				$stop;
 			end
 
             vectornum = vectornum +1;
             expected_address = expected_address + 1;
-            if (expected_address == 16'd10000)
-                expected_address = 0;
 		end
 		
 endmodule 
