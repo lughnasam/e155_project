@@ -6,7 +6,7 @@
 
 module dac_spi(input  logic sck, sdi, reset, 
                output logic sdo, chip_en,
-               output logic [11:0] data_read,);
+               output logic [11:0] data_read);
 
     logic reading;
 

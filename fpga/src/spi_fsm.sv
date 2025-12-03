@@ -1,7 +1,11 @@
 module spi_fsm(input logic sck, start_read, reset,
                output logic sdo, reading, chip_en);
 
+<<<<<<< Updated upstream
     typedef enum logic [3:0] {pause, start, sgl, channel, msbf, readNull, readBits} statetype;
+=======
+    typedef enum logic {pause, start, sgl, channel, msbf, readNull, readBits, write} statetype;
+>>>>>>> Stashed changes
     statetype state, next_state;
     logic [3:0] count;
 
@@ -27,14 +31,23 @@ module spi_fsm(input logic sck, start_read, reset,
             msbf:        next_state = readNull;
             readNull:    next_state = readBits;
             readBits:    if (count < 11) next_state = readBits; 
+<<<<<<< Updated upstream
                          else next_state = pause; 
+=======
+                         else next_state = write;
+>>>>>>> Stashed changes
             default:     next_state = pause;
         endcase
     end
 
     assign sdo = (state == start) || (state == sgl) || (state == msbf); 
+<<<<<<< Updated upstream
     assign reading = (state==readBits);
     assign chip_en = (state == pause);
+=======
+    assign reading = |(state);
+    assign chip_en = (state == pause) | (state == write);
+>>>>>>> Stashed changes
     
 
 endmodule
