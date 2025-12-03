@@ -36,11 +36,12 @@ void startup(void){
   initTIM(TIM15);
   initTIM(TIM6);
   DAC_init();
-  initSPI(0b101, 1, 1); // SPI clk = master clk / 64, CPOL = 1, CPHA = 1
+  initSPI(0b100, 1, 1); // SPI clk = master clk / 32, CPOL = 1, CPHA = 1
   pinMode(PA0,GPIO_OUTPUT);
   pinMode(PA1,GPIO_INPUT);
   pinMode(PA5,GPIO_OUTPUT);
   pinMode(Distortion_Pin, GPIO_INPUT);
+  initRNG();
 
 }
 
@@ -65,11 +66,14 @@ uint16_t clipping(uint16_t audio_value){
 
 int main(void){
   startup();
-  
+  volatile int number;
   
 
   while(1){
-  
+  delay_millis(TIM15, 100);
+  number = RNG_GetRandom();
+  printf("Random Number is %d\n",number);
+  /*
   if(spot>=100){
     spot = 0;
   }
@@ -82,6 +86,6 @@ int main(void){
 
   DAC_set_value(output);
 }
-
-
+  */
+}
 }
