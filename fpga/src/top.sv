@@ -1,6 +1,6 @@
 module top(input logic reset, adc_sdi, chorus_on, reverb_on,
            input logic mcu_sck, mcu_transfer,
-           output logic chip_en, adc_sdo, fpga_sck, mcu_sdo);
+           output logic chip_en, adc_sdo, fpga_sck, mcu_sdo, tfr_ready);
 
     logic int_osc, start_sample, write_en, main_read;
     logic [2:0] value;
@@ -35,7 +35,7 @@ module top(input logic reset, adc_sdi, chorus_on, reverb_on,
 
     // datapath fsm
     dp_fsm dpFSM(.clk(fpga_sck), .reset(reset), .start(start_sample), .rev_read(rev_read),
-                  .chor_read(chor_read), .main_read(main_read));
+                  .chor_read(chor_read), .main_read(main_read), .tfr_ready(tfr_ready));
 
     shift_reg_mcu_spi mcuSPI(.mcu_sck(mcu_sck), .fpga_sck(fpga_sck), .reset(reset), .load(main_read));
     
