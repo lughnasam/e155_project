@@ -1,10 +1,11 @@
 module top(input logic reset, adc_sdi, chorus_on, reverb_on,
-           output logic chip_en, adc_sdo, fpga_sck);
+           input logic mcu_sck, mcu_transfer,
+           output logic chip_en, adc_sdo, fpga_sck, mcu_sdo);
 
-    logic int_osc, start_sample;
+    logic int_osc, start_sample, write_en, main_read;
     logic [2:0] value;
     logic [15:0] address, write_data;
-    logic 
+    logic mem_out;
 
     // HSOSC at 6 MHz
     HSOSC #(.CLKHF_DIV(2'b11)) hf_osc(.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
@@ -25,10 +26,19 @@ module top(input logic reset, adc_sdi, chorus_on, reverb_on,
     // zero extend to 16 bits for memory write
     assign write_data = {4'b0, adc_read};
 
+
     // address counter
     address_counter addressCount(.clk(clk), .inc_adr(inc_adr), .reset(reset), .address(address));
 
     // memory bank
-    memory_storage dataMem()
+    memory_storage dataMem(.clk(fpga_sck), .write(write_en), .address(address), .datain(write_data), .dataout(mem_out));
+
+    // datapath fsm
+    dp_fsm dpFSM(.clk(fpga_sck), .reset(reset), .start(start_sample), .rev_read(rev_read),
+                  .chor_read(chor_read), .main_read(main_read));
+
+    shift_reg_mcu_spi mcuSPI(.mcu_sck(mcu_sck), .fpga_sck(fpga_sck), .reset(reset), .load(main_read));
+    
+
 
 endmodule
