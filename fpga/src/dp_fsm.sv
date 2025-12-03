@@ -1,4 +1,4 @@
-module dp_fsm(input logic clk, reset, start, tramsmit,
+module dp_fsm(input logic clk, reset, start, transmit,
               output logic rev_read, chor_read, main_read, tfr_ready
               );
 
