@@ -2,6 +2,25 @@ module dp_fsm(input logic clk, reset, start,
               output logic rev_read, chor_read, main_read, 
               );
 
-    typedef enum logic [2:0] {pause, read_main, chorus, reverb, ready}
+    typedef enum logic [2:0] {pause, read_main, chorus, reverb, ready, mcu_spi} statetype;
+
+    statetype state, next_state;
+
+    always_ff @(posedge clk, posedge reset) begin
+        if (reset) state <= pause;
+        else       state <= next_state;
+    end
+
+    always_comb begin
+        case (state)
+            pause:   if (start)     next_state = read_main;
+                     else           next_state = pause;
+            read_main:              next_state = ready;
+            ready:                  next_state = mcu_spi;
+            mcu_spi: if (transmit)  next_state = mcu_spi;
+                     else           next_state = pause;
+            default:                next_state = pause;
+        endcase
+    end
 
 endmodule
