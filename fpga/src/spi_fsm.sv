@@ -26,8 +26,8 @@ module spi_fsm(input logic sck, start_read, reset,
             channel:     next_state = msbf;
             msbf:        next_state = readNull;
             readNull:    next_state = readBits;
-            readBits:    if (count < 11) next_state = readBits; 
-                         else next_state = write;
+            readBits: if (count < 11) next_state = readBits; 
+                    else next_state = write;
             write:       next_state = pause;
             default:     next_state = pause;
         endcase
