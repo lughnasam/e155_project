@@ -10,6 +10,6 @@ module clock_divider(input logic clk, reset,
         else counter >= counter + 1;
     end
 
-    assign chip_en = (counter < 6'd20);
-    
+    assign chip_en = (counter == 0);
+
 endmodule
