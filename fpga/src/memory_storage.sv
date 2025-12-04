@@ -22,7 +22,7 @@ module memory_storage(input  logic        clk, write,
         .CK(clk),
         .STDBY(1'b0),
         .SLEEP(1'b0),
-        .PWROFF_N(1'b0),
+        .PWROFF_N(1'b1),
         .DO(data1)
     );
 
@@ -35,7 +35,7 @@ module memory_storage(input  logic        clk, write,
         .CK(clk),
         .STDBY(1'b0),
         .SLEEP(1'b0),
-        .PWROFF_N(1'b0),
+        .PWROFF_N(1'b1),
         .DO(data2)
     );
 
@@ -48,7 +48,7 @@ module memory_storage(input  logic        clk, write,
         .CK(clk),
         .STDBY(1'b0),
         .SLEEP(1'b0),
-        .PWROFF_N(1'b0),
+        .PWROFF_N(1'b1),
         .DO(data3)
     );
 
@@ -61,7 +61,7 @@ module memory_storage(input  logic        clk, write,
         .CK(clk),
         .STDBY(1'b0),
         .SLEEP(1'b0),
-        .PWROFF_N(1'b0),
+        .PWROFF_N(1'b1),
         .DO(data4)
     );
 	

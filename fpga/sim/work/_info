@@ -1,0 +1,421 @@
+m255
+K4
+z2
+!s12c _opt1
+Z0 !s99 nomlopt
+Z1 !s12c _opt
+R0
+R1
+R0
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/lscc/radiant/2024.2/questasim/win64
+T_opt
+!s110 1764805294
+VnTD@EQ2W1Vd6IXECA2@lX2
+04 9 4 work dp_fsm_tb fast 0
+=1-089df44eda1d-6930caad-344-4604
+R0
+!s12f OEM25U2 
+Z3 !s12b OEM100
+Z4 !s124 OEM100
+Z5 !s135 nogc
+o-quiet -auto_acc_if_foreign -work work +acc -L iCE40UP
+Z6 tCvgOpt 0
+n@_opt
+Z7 OL;O;2024.2;79
+R2
+T_opt1
+!s110 1764808793
+VMeoLGA8VIVgjG8Vb=YkBA1
+04 3 4 work top fast 0
+=1-089df44eda1d-6930d858-2f5-1c40
+R0
+!s12f OEM25U9 
+R3
+R4
+R5
+o-quiet -auto_acc_if_foreign -work work -L iCE40UP +acc -L iCE40UP
+R6
+n@_opt1
+R7
+vaddress_counter
+2C:/Users/lumiller/e155_project/fpga/src/address_counter.sv
+Z8 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z9 !s110 1764808770
+!i10b 1
+!s100 8VO3=dJAiU5:Q3oCanoec0
+IJ3NWXii<YCYI:LIX[]?do1
+S1
+Z10 dC:/Users/lumiller/e155_project/fpga/sim
+w1764801759
+8C:/Users/lumiller/e155_project/fpga/src/address_counter.sv
+FC:/Users/lumiller/e155_project/fpga/src/address_counter.sv
+!i122 59
+L0 1 9
+Z11 VDg1SIo80bB@j0V0VzS_@n1
+Z12 OL;L;2024.2;79
+r1
+!s85 0
+31
+!s108 1764808769.000000
+!s107 C:/Users/lumiller/e155_project/fpga/src/address_counter.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/lumiller/e155_project/fpga/src/address_counter.sv|
+!i113 0
+Z13 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R6
+vaddress_counter_tb
+2C:/Users/lumiller/e155_project/fpga/src/address_counter_tb.sv
+R8
+R9
+!i10b 1
+!s100 MJO5W@E5g;=]dY[CXD0ae3
+IiC@AFcRgc0@>c`DLN=60Y2
+S1
+R10
+Z14 w1764747386
+8C:/Users/lumiller/e155_project/fpga/src/address_counter_tb.sv
+FC:/Users/lumiller/e155_project/fpga/src/address_counter_tb.sv
+!i122 60
+L0 4 43
+R11
+R12
+r1
+!s85 0
+31
+Z15 !s108 1764808770.000000
+!s107 C:/Users/lumiller/e155_project/fpga/src/address_counter_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/lumiller/e155_project/fpga/src/address_counter_tb.sv|
+!i113 0
+R13
+R6
+vclock_divider
+2C:/Users/lumiller/e155_project/fpga/src/clock_divider.sv
+R8
+R9
+!i10b 1
+!s100 ;dH0;[^51hAVz`<;4<<l11
+IQ><nWN>eOTXzUYQO>GBbX1
+S1
+R10
+w1764801771
+8C:/Users/lumiller/e155_project/fpga/src/clock_divider.sv
+FC:/Users/lumiller/e155_project/fpga/src/clock_divider.sv
+!i122 61
+L0 1 14
+R11
+R12
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/lumiller/e155_project/fpga/src/clock_divider.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/lumiller/e155_project/fpga/src/clock_divider.sv|
+!i113 0
+R13
+R6
+vcounter
+2C:/Users/lumiller/e155_project/fpga/src/counter.sv
+R8
+R9
+!i10b 1
+!s100 _9KIgTIVP9H;b8fN5Q_KH1
+IC2l?@LnUcZ2_bY@na2gk;1
+S1
+R10
+w1764801779
+8C:/Users/lumiller/e155_project/fpga/src/counter.sv
+FC:/Users/lumiller/e155_project/fpga/src/counter.sv
+!i122 62
+L0 8 12
+R11
+R12
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/lumiller/e155_project/fpga/src/counter.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/lumiller/e155_project/fpga/src/counter.sv|
+!i113 0
+R13
+R6
+vdac_spi
+2C:/Users/lumiller/e155_project/fpga/src/dac_spi.sv
+R8
+R9
+!i10b 1
+!s100 TjHCWAA^OW4]25`4ihLW:3
+IfZz0_BDg>4zJ;[Z3f6k7:3
+S1
+R10
+w1764754200
+8C:/Users/lumiller/e155_project/fpga/src/dac_spi.sv
+FC:/Users/lumiller/e155_project/fpga/src/dac_spi.sv
+!i122 63
+L0 7 13
+R11
+R12
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/lumiller/e155_project/fpga/src/dac_spi.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/lumiller/e155_project/fpga/src/dac_spi.sv|
+!i113 0
+R13
+R6
+vdp_fsm
+2C:/Users/lumiller/e155_project/fpga/src/dp_fsm.sv
+R8
+R9
+!i10b 1
+!s100 <?79h>1If?IZh[8bF9Q:^0
+Ieok?gEFEl8jnhe<gaEZV@0
+S1
+R10
+w1764805509
+8C:/Users/lumiller/e155_project/fpga/src/dp_fsm.sv
+FC:/Users/lumiller/e155_project/fpga/src/dp_fsm.sv
+!i122 64
+L0 1 34
+R11
+R12
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/lumiller/e155_project/fpga/src/dp_fsm.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/lumiller/e155_project/fpga/src/dp_fsm.sv|
+!i113 0
+R13
+R6
+vdp_fsm_tb
+2C:/Users/lumiller/e155_project/fpga/src/dp_fsm_tb.sv
+R8
+R9
+!i10b 1
+!s100 6S9mWZLXTR@FMNd5gb0JR3
+IYzXm3kD4Wz=ToHWU:HjF^1
+S1
+R10
+w1764800578
+8C:/Users/lumiller/e155_project/fpga/src/dp_fsm_tb.sv
+FC:/Users/lumiller/e155_project/fpga/src/dp_fsm_tb.sv
+!i122 65
+L0 4 34
+R11
+R12
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/lumiller/e155_project/fpga/src/dp_fsm_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/lumiller/e155_project/fpga/src/dp_fsm_tb.sv|
+!i113 0
+R13
+R6
+vmemory_storage
+2C:/Users/lumiller/e155_project/fpga/src/memory_storage.sv
+R8
+R9
+!i10b 1
+!s100 3;jR7HbGAinB;E8HGX_S=1
+IJ9@QbO9Lj^JKMOb9=[gLH2
+S1
+R10
+w1764761415
+8C:/Users/lumiller/e155_project/fpga/src/memory_storage.sv
+FC:/Users/lumiller/e155_project/fpga/src/memory_storage.sv
+!i122 66
+L0 1 72
+R11
+R12
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/lumiller/e155_project/fpga/src/memory_storage.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/lumiller/e155_project/fpga/src/memory_storage.sv|
+!i113 0
+R13
+R6
+vshift_reg
+2C:/Users/lumiller/e155_project/fpga/src/shift_reg.sv
+R8
+R9
+!i10b 1
+!s100 5;OIo3Q6>?0GHYOZDOHEm2
+IB;7?^`9CJ2IiSGQV^]bWi0
+S1
+R10
+R14
+8C:/Users/lumiller/e155_project/fpga/src/shift_reg.sv
+FC:/Users/lumiller/e155_project/fpga/src/shift_reg.sv
+!i122 68
+L0 1 10
+R11
+R12
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/lumiller/e155_project/fpga/src/shift_reg.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/lumiller/e155_project/fpga/src/shift_reg.sv|
+!i113 0
+R13
+R6
+vshift_reg_mcu_spi
+2C:/Users/lumiller/e155_project/fpga/src/shift_reg_mcu_spi.sv
+R8
+R9
+!i10b 1
+!s100 8>B`<eoG4I>0FmP@OzUBF0
+I2JkSB[InY<b?[VRcXl]J<1
+S1
+R10
+w1764753745
+8C:/Users/lumiller/e155_project/fpga/src/shift_reg_mcu_spi.sv
+FC:/Users/lumiller/e155_project/fpga/src/shift_reg_mcu_spi.sv
+!i122 69
+L0 1 18
+R11
+R12
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/lumiller/e155_project/fpga/src/shift_reg_mcu_spi.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/lumiller/e155_project/fpga/src/shift_reg_mcu_spi.sv|
+!i113 0
+R13
+R6
+vshift_reg_tb
+2C:/Users/lumiller/e155_project/fpga/src/shift_reg_tb.sv
+R8
+R9
+!i10b 1
+!s100 Y;n<FH[m`z2WV;N`0EU311
+I89WS^F6@DeI1gj2K8CHmT0
+S1
+R10
+R14
+8C:/Users/lumiller/e155_project/fpga/src/shift_reg_tb.sv
+FC:/Users/lumiller/e155_project/fpga/src/shift_reg_tb.sv
+!i122 70
+L0 4 53
+R11
+R12
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/lumiller/e155_project/fpga/src/shift_reg_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/lumiller/e155_project/fpga/src/shift_reg_tb.sv|
+!i113 0
+R13
+R6
+vspi_fsm
+2C:/Users/lumiller/e155_project/fpga/src/spi_fsm.sv
+R8
+R9
+!i10b 1
+!s100 iIf158kOmQH9OeoQgHeMN2
+IMGN`^DXH8Fk>zC]?eVP5U1
+S1
+R10
+w1764803003
+8C:/Users/lumiller/e155_project/fpga/src/spi_fsm.sv
+FC:/Users/lumiller/e155_project/fpga/src/spi_fsm.sv
+!i122 71
+L0 1 42
+R11
+R12
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/lumiller/e155_project/fpga/src/spi_fsm.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/lumiller/e155_project/fpga/src/spi_fsm.sv|
+!i113 0
+R13
+R6
+vspi_fsm_tb
+2C:/Users/lumiller/e155_project/fpga/src/spi_fsm_tb.sv
+R8
+R9
+!i10b 1
+!s100 bn4Xn9j<<A9_VEoZOTS:22
+IDlDncH53zPN:4@_VRzAnB1
+S1
+R10
+R14
+8C:/Users/lumiller/e155_project/fpga/src/spi_fsm_tb.sv
+FC:/Users/lumiller/e155_project/fpga/src/spi_fsm_tb.sv
+!i122 72
+L0 4 31
+R11
+R12
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/lumiller/e155_project/fpga/src/spi_fsm_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/lumiller/e155_project/fpga/src/spi_fsm_tb.sv|
+!i113 0
+R13
+R6
+vtestbench
+2C:/Users/lumiller/e155_project/fpga/src/memory_storage_testbench.sv
+R8
+R9
+!i10b 1
+!s100 Lzc?MAELddLg7NiWF3>0l3
+Ik?G3Xb^08;f_J:9>GGZbi1
+S1
+R10
+w1764655176
+8C:/Users/lumiller/e155_project/fpga/src/memory_storage_testbench.sv
+FC:/Users/lumiller/e155_project/fpga/src/memory_storage_testbench.sv
+!i122 67
+L0 1 56
+R11
+R12
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/lumiller/e155_project/fpga/src/memory_storage_testbench.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/lumiller/e155_project/fpga/src/memory_storage_testbench.sv|
+!i113 0
+R13
+R6
+vtop
+2C:/Users/lumiller/e155_project/fpga/src/top.sv
+R8
+R9
+!i10b 1
+!s100 Hah]kLPnMRbSYMjAm8Cm=2
+I[:Q@c`9nI^do1hiPGHj;:2
+S1
+R10
+w1764806980
+8C:/Users/lumiller/e155_project/fpga/src/top.sv
+FC:/Users/lumiller/e155_project/fpga/src/top.sv
+!i122 73
+L0 1 49
+R11
+R12
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/lumiller/e155_project/fpga/src/top.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/lumiller/e155_project/fpga/src/top.sv|
+!i113 0
+R13
+R6

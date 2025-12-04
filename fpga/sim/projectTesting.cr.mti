@@ -1,0 +1,92 @@
+C:/Users/lumiller/e155_project/fpga/src/spi_fsm_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/lumiller/e155_project/fpga/src/spi_fsm_tb.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module spi_fsm_tb
+
+Top level modules:
+	spi_fsm_tb
+
+} {} {}} C:/Users/lumiller/e155_project/fpga/src/dp_fsm_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/lumiller/e155_project/fpga/src/dp_fsm_tb.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module dp_fsm_tb
+
+Top level modules:
+	dp_fsm_tb
+
+} {} {}} C:/Users/lumiller/e155_project/fpga/src/spi_fsm.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/lumiller/e155_project/fpga/src/spi_fsm.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module spi_fsm
+
+Top level modules:
+	spi_fsm
+
+} {} {}} C:/Users/lumiller/e155_project/fpga/src/clock_divider.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/lumiller/e155_project/fpga/src/clock_divider.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module clock_divider
+
+Top level modules:
+	clock_divider
+
+} {} {}} C:/Users/lumiller/e155_project/fpga/src/address_counter_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/lumiller/e155_project/fpga/src/address_counter_tb.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module address_counter_tb
+
+Top level modules:
+	address_counter_tb
+
+} {} {}} C:/Users/lumiller/e155_project/fpga/src/dac_spi.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/lumiller/e155_project/fpga/src/dac_spi.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module dac_spi
+
+Top level modules:
+	dac_spi
+
+} {} {}} C:/Users/lumiller/e155_project/fpga/src/address_counter.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/lumiller/e155_project/fpga/src/address_counter.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module address_counter
+
+Top level modules:
+	address_counter
+
+} {} {}} C:/Users/lumiller/e155_project/fpga/src/memory_storage.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/lumiller/e155_project/fpga/src/memory_storage.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module memory_storage
+
+Top level modules:
+	memory_storage
+
+} {} {}} C:/Users/lumiller/e155_project/fpga/src/counter.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/lumiller/e155_project/fpga/src/counter.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module counter
+
+Top level modules:
+	counter
+
+} {} {}} C:/Users/lumiller/e155_project/fpga/src/shift_reg_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/lumiller/e155_project/fpga/src/shift_reg_tb.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module shift_reg_tb
+
+Top level modules:
+	shift_reg_tb
+
+} {} {}} C:/Users/lumiller/e155_project/fpga/src/shift_reg_mcu_spi.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/lumiller/e155_project/fpga/src/shift_reg_mcu_spi.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module shift_reg_mcu_spi
+
+Top level modules:
+	shift_reg_mcu_spi
+
+} {} {}} C:/Users/lumiller/e155_project/fpga/src/shift_reg.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/lumiller/e155_project/fpga/src/shift_reg.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module shift_reg
+
+Top level modules:
+	shift_reg
+
+} {} {}} C:/Users/lumiller/e155_project/fpga/src/memory_storage_testbench.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/lumiller/e155_project/fpga/src/memory_storage_testbench.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}}

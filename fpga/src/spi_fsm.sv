@@ -33,7 +33,7 @@ module spi_fsm(input logic sck, start_read, reset,
         endcase
     end
 
-    assign sdo = (state == start) || (state == sgl) || (state == msbf); 
+    assign sdo = (state == start) | (state == sgl) | (state == msbf); 
     assign reading = (state == readBits);
     assign chip_en = (state == pause) | (state == write);
     assign write_en = (state == write);
