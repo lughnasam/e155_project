@@ -1,14 +1,7 @@
-/*********************************************************************
-*                    SEGGER Microcontroller GmbH                     *
-*                        The Embedded Experts                        *
-**********************************************************************
-
--------------------------- END-OF-HEADER -----------------------------
-
-File    : main.c
-Purpose : Generic application start
-
-*/
+// Names: Kanoa Parker and Lughnasa Miller
+// Date: 12/3/2025
+// Email: kanparker@hmc.edu, lumiller@hmc.edu
+// Description: Main code for MCU side of guitar pedal project 
 
 #include <string.h>
 #include <stdlib.h>
@@ -25,7 +18,7 @@ volatile uint16_t readings[100];
 uint16_t check = 43690;
 volatile uint16_t output;
 
-
+// initializes peripherals
 void startup(void){
   configureFlash();
   configureClock();
@@ -45,6 +38,7 @@ void startup(void){
 
 }
 
+// reads FPGA signal over SPI
 uint16_t getvalue(void){
   while(!digitalRead(PA1));//Wait for SPI Signal to be ready to send data
 
@@ -58,6 +52,7 @@ uint16_t getvalue(void){
 
 }
 
+// clips audio for distortion effect
 uint16_t clipping(uint16_t audio_value){
   if(audio_value>=3000) return 3000;
   else if(audio_value<=1000) return 1000;
@@ -71,9 +66,8 @@ int main(void){
 
   while(1){
   delay_millis(TIM15, 100);
-  number = RNG_GetRandom();
-  printf("Random Number is %d\n",number);
-  /*
+
+
   if(spot>=100){
     spot = 0;
   }
@@ -86,6 +80,5 @@ int main(void){
 
   DAC_set_value(output);
 }
-  */
 }
-}
+

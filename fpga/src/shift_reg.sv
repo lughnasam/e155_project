@@ -1,3 +1,8 @@
+// Names: Kanoa Parker and Lughnasa Miller
+// Date: 12/3/2025
+// Email: kanparker@hmc.edu, lumiller@hmc.edu
+// Description: Single clocked shift register for DAC communications.
+
 module shift_reg(input  logic        clk, reset, in, reading,
                  output logic [11:0] dataout);
 

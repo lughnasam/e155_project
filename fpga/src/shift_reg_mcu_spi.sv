@@ -1,3 +1,7 @@
+// Names: Kanoa Parker and Lughnasa Miller
+// Date: 12/3/2025
+// Email: kanparker@hmc.edu, lumiller@hmc.edu
+// Description: Dual clocked shift register for FPGA peripheral to MCU controller SPI comms.
 
 module shift_reg_mcu_spi(input        mcu_sck, fpga_sck, reset, load, transmit,
                          input [15:0] data_load,

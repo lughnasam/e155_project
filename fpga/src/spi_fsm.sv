@@ -1,3 +1,8 @@
+// Names: Kanoa Parker and Lughnasa Miller
+// Date: 12/3/2025
+// Email: kanparker@hmc.edu, lumiller@hmc.edu
+// Description: FSM for SPI/ADC SPI communications
+
 module spi_fsm(input logic sck, start_read, reset,
                output logic sdo, reading, chip_en, write_en);
 
