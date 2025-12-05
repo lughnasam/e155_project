@@ -1,4 +1,10 @@
-module memory_storage(input  logic        clk, write,
+// Names: Kanoa Parker and Lughnasa Miller
+// Date: 12/3/2025
+// Email: kanparker@hmc.edu, lumiller@hmc.edu
+// Description: This module implements FPGA memory native to the ICE40UP5k with address extension
+//              to combine multiple blocks.
+
+module memory_bank(input  logic        clk, write,
                    input  logic [15:0] address,
                    input  logic [15:0] datain,
                    output logic [15:0] dataout);

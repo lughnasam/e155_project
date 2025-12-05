@@ -1,3 +1,9 @@
+// Names: Kanoa Parker and Lughnasa Miller
+// Date: 12/3/2025
+// Email: kanparker@hmc.edu, lumiller@hmc.edu
+// Description: This module is a testbench for our datapath FSM
+
+
 `timescale 1ns/1ns
 `default_nettype none
 `define N_TV 21

@@ -4,8 +4,8 @@
 // Description: This module controls SPI communication with an
 //              external MCP3202 ADC.
 
-module dac_spi(input  logic sck, sdi, reset, start_read,
-               output logic sdo, chip_en, write_en,
+module dac_spi(input  logic sck, sdi, reset, start_read
+               output logic sdo, chip_en,
                output logic [11:0] data_read);
 
     logic reading;

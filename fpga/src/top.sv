@@ -1,3 +1,9 @@
+// Names: Kanoa Parker and Lughnasa Miller
+// Date: 12/3/2025
+// Email: kanparker@hmc.edu, lumiller@hmc.edu
+// Description: This module is the top-level module for our E155 final project
+//              implementing guitar pedals
+
 module top(input logic reset, adc_sdi, chorus_on, reverb_on,
            input logic mcu_sck, mcu_transfer,
            output logic chip_en, adc_sdo, fpga_sck, mcu_sdo, tfr_ready, start);
@@ -27,7 +33,6 @@ module top(input logic reset, adc_sdi, chorus_on, reverb_on,
     // zero extend to 16 bits for memory write
     assign write_data = {4'b0, adc_read};
 
-
     // address counter
     address_counter addressCount(.clk(fpga_sck), .inc_adr(inc_adr), .reset(~reset), .address(address));
 
@@ -40,10 +45,8 @@ module top(input logic reset, adc_sdi, chorus_on, reverb_on,
                   .chor_read(chor_read), .main_read(main_read), .tfr_ready(tfr_ready),
 				  .inc_adr(inc_adr), .transmit(mcu_transfer));
 
+    // shift register accepting clock from BOTH FPGA and MCU
     shift_reg_mcu_spi mcuSPI(.mcu_sck(mcu_sck), .fpga_sck(fpga_sck), .reset(~reset), .load(main_read), 
                             .transmit(mcu_transfer), .data_load(mem_out), .mcu_sdo(mcu_sdo));
-    
-	assign start = start_sample;
-
 
 endmodule

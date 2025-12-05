@@ -1,3 +1,9 @@
+// Names: Kanoa Parker and Lughnasa Miller
+// Date: 12/3/2025
+// Email: kanparker@hmc.edu, lumiller@hmc.edu
+// Description: This module sends a pulse to start a sample cycle in our datapath
+//              and ADC SPI FSM.
+
 module clock_divider(input logic clk, reset,
                      output logic start_sample);
 

@@ -1,3 +1,8 @@
+// Names: Kanoa Parker and Lughnasa Miller
+// Date: 12/3/2025
+// Email: kanparker@hmc.edu, lumiller@hmc.edu
+// Description: This module implements an FSM that outputs control signals for our datapath
+
 module dp_fsm(input logic clk, reset, start, transmit,
               output logic rev_read, chor_read, main_read, tfr_ready, inc_adr);
 

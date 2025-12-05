@@ -1,3 +1,9 @@
+// Names: Kanoa Parker and Lughnasa Miller
+// Date: 12/3/2025
+// Email: kanparker@hmc.edu, lumiller@hmc.edu
+// Description: This module verifies that the memory IP from Lattice is appropriately
+//              implemented with address extension.
+
 module testbench;
 
 logic clk, write;
