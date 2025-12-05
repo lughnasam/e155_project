@@ -29,6 +29,7 @@ module dp_fsm(input logic clk, reset, start, transmit,
         endcase
     end
 
+    // control signals needed
     assign rev_read = (state == reverb);
     assign chor_read = (state == chorus);
     assign main_read = (state == read_main);

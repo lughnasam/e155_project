@@ -33,9 +33,16 @@ module spi_fsm(input logic sck, start_read, reset,
         endcase
     end
 
+    // should be high when sending these bits to initialize a sample from ADC
     assign sdo = (state == start) | (state == sgl) | (state == msbf); 
+
+    // tells shift register to shift when reading from ADC
     assign reading = (state == readBits);
+
+    // active low CS
     assign chip_en = (state == pause) | (state == write);
+
+    // write to memory after transfer
     assign write_en = (state == write);
 
 

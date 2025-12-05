@@ -5,7 +5,8 @@ module shift_reg_mcu_spi(input        mcu_sck, fpga_sck, reset, load, transmit,
 
     logic [15:0] register;
 	logic sdo_reg, clk;
-	
+    
+    // MCU clock when transmitting, FPGA clock otherwise
 	assign clk = transmit ? mcu_sck : fpga_sck;
 	
     always_ff @(posedge clk, posedge reset) begin

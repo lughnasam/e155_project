@@ -9,6 +9,7 @@ module clock_divider(input logic clk, reset,
 
     logic [6:0] counter;
 
+    // every 30 clock cycles, send ready signal
     always_ff @(posedge clk, posedge reset) begin
         if (reset) counter <= 0;
         else if (counter >= 7'd29) counter <= 0;
